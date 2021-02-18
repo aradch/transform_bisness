@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.base {
+  margin: 40px 120px;
+  display: grid;
+  grid-template-areas:
+    "header111 header111 header111"
+    "s111 s222 s333"
+    "footer111 footer111 footer111";
+  grid-gap: 50px;
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  font-size: 120%;
+  font-weight: 300;
+  text-align: center;
+}
+
+.t-t {
+  grid-area: header111;
+}
+
+.h-r {
+  font-size: 230%;
+}
+
+.ital {
+  margin: 20px 0;
+}
+
+.h-link a {
+  text-decoration: none;
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+.h-link a:hover {
+  color: rgb(79, 127, 216);
+}
+
+.s1 {
+  grid-area: s111;
+}
+
+.im1,
+.im2,
+.im3 {
+  width: 310px;
+  height: 210px;
+}
+
+.p-1,
+.p-2,
+.p-3 {
+  color: rgba(236, 1, 1, 0.829);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: left;
+  padding-left: 12px;
+  margin: 20px 0 30px 0;
+}
+
+.l-1,
+.l-2,
+.l-3 {
+  text-align: left;
+  list-style-type: none;
+  padding-left: 12px;
+}
+
+.l-1 li,
+.l-2 li,
+.l-3 li {
+  background: url(images/checkmarkcircle2_111054.svg) no-repeat;
+  padding-left: 25px;
+  line-height: 90%;
+  margin-bottom: 10px;
+  height: 22px;
+}
+
+.s2 {
+  grid-area: s222;
+}
+
+.s3 {
+  grid-area: s333;
+}
+
+.f-r {
+  grid-area: footer111;
+}
+
+.b-n {
+  cursor: pointer;
+  background-color: rgba(236, 1, 1, 0.829);
+  border: none;
+  color: white;
+  font-size: 90%;
+  padding: 12px 30px;
+  border-radius: 4px;
+}
+
+.b-n:hover {
+  background-color: rgba(255, 0, 0, 0.846);
+}
+
+@media (max-width: 1024px) {
+  .base {
+    margin: 20px 30px;
+    grid-gap: 10px;
+  }
+  .p-1,
+  .p-2,
+  .p-3,
+  .l-1,
+  .l-2,
+  .l-3 {
+    padding-left: 0;
+  }
+  .b-n {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .base {
+    grid-template-areas:
+      "header111 header111"
+      "s111 s222"
+      "s333 s333"
+      "footer111 footer111";
+    grid-gap: 20px;
+  }
+  .p-1,
+  .p-2,
+  .l-1,
+  .l-2 {
+    padding-left: 14px;
+  }
+  .p-3,
+  .l-3 {
+    padding-left: 200px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .p-3,
+  .l-3 {
+    padding-left: 110px;
+  }
+  .im1,
+  .im2,
+  .im3 {
+    width: 200px;
+    height: 135px;
+  }
+  .s1,
+  .s2,
+  .s3 {
+    font-size: 80%;
+  }
+  .p-1,
+  .p-2,
+  .p-3 {
+    letter-spacing: 2px;
+  }
+  .p-1,
+  .p-2,
+  .l-1,
+  .l-2 {
+    padding-left: 0;
+  }
+}
